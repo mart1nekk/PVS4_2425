@@ -4,9 +4,9 @@ public class Country {
     String countryName;
     String continent;
     int population;
-    double lifeExpectancy;
+    Double lifeExpectancy;
 
-    public Country(String countryName, String continent, int population, double lifeExpectancy) {
+    public Country(String countryName, String continent, int population, Double lifeExpectancy) {
         this.countryName = countryName;
         this.continent = continent;
         this.population = population;
@@ -50,7 +50,7 @@ public class Country {
         return lifeExpectancy;
     }
 
-    public void setLifeExpectancy(double lifeExpectancy) {
+    public void setLifeExpectancy(Double lifeExpectancy) {
         this.lifeExpectancy = lifeExpectancy;
     }
 }

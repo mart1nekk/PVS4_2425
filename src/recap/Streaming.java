@@ -35,7 +35,7 @@ public class Streaming {
     public static void main(String[] args) {
         ArrayList<Country> countries = loadData("countries.txt");
         System.out.println(countries);
-        System.out.println(countries.size());
+        System.out.println(countries.size()); //pocet zemi
 
         countries.stream()
                 .filter(country -> country.getContinent().equals("Europe"))
