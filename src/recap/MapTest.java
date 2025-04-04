@@ -94,10 +94,6 @@ public class MapTest {
        double avg = (pocetPredmetu/sdkgh) * 100.0;
         System.out.println(avg);
 
-        /*idk.stream()
-                .filter(s ->s.getSubject().equals("Chemistry") && s.isScore() <30)
-                .forEach(System.out::println);
-        */
 
         //treti
         List<student> unique = idk.stream()
