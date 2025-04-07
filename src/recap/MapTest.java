@@ -104,7 +104,7 @@ public class MapTest {
 
         //ctvrty
         double avgtime = idk.stream()
-                .filter(s -> s.getTimespent())
+              //  .filter(s -> s.getTimespent())
                 .mapToDouble(student::getTimespent)
                 .average()
                 .orElse(0);
