@@ -91,5 +91,32 @@ class mapping {
         Map<String, Long> countTests = students.stream()
                 .collect(Collectors.groupingBy(Student::getSubject, Collectors.counting()));
         System.out.println("Count: " + countTests);
+
+
+        //průměrné skóre z každého předmětu
+        Map<String, Double> avgScore = students.stream()
+                .collect(Collectors.groupingBy(Student::getSubject, Collectors.averagingDouble(Student::getScore)));
+        System.out.println("prumer" + avgScore);
+
+        //průměrné sckóre každého studenta (podle jména)
+        Map <String, Double> avgScoreByName = students.stream()
+                .collect(Collectors.groupingBy(Student::getName,Collectors.averagingDouble(Student::getScore)));
+        System.out.println("Průměrné skóre studenta je " + avgScoreByName);
+
+        //spočítat, kolik testů psal každý student podle jména
+        Map<String, Long> counting = students.stream()
+                .collect(Collectors.groupingBy(Student::getName,Collectors.counting()));
+        System.out.println("Počet testů na studenta" + counting);
+
+        //maximalni score tzz kazdeho predmetu
+        Map<String, Double> maxc = students.stream()
+                .collect(Collectors.groupingBy(Student::getSubject,Collectors.collectingAndThen(
+                        Collectors.maxBy((s1,s2) -> s1.getScore().compareTo(s2.getScore())),
+                        max -> max.map(Student::getScore).orElse(0.0)
+                )));
+
+        System.out.println("maximalni skóre z každého předmětu " + maxc);
+
+
     }
 }

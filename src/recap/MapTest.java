@@ -6,14 +6,15 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MapTest {
     static class student{
         String name;
-        String subject;
-        double score;
-        int Timespent;
+        private String subject;
+       private double score;
+       private int Timespent;
 
         public student(String name, String subject, double score, int timespent) {
             this.name = name;
@@ -102,14 +103,13 @@ public class MapTest {
         System.out.println(idk.size());
         System.out.println(unique.size());
 
-        //ctvrty
-        double avgtime = idk.stream()
-                .filter(s -> s.getTimespent())
-                .mapToDouble(student::getTimespent)
-                .average()
-                .orElse(0);
-        System.out.println(avgtime);
+        //ctvrty Vypište do konzole, jaká je průměrná doba psaní testu z každého předmětu - namapujte.
 
+
+        //5) Namapujte počet všech testů vůči všem předmětům.
+        Map<String, Long> cnt = idk.stream()
+                .collect(Collectors.groupingBy(student::getSubject,Collectors.counting()));
+        System.out.println(cnt);
 
         HashMap<String, ArrayList<student>> contiMap = new HashMap<>();
         for (student st: idk ){
