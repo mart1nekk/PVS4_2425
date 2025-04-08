@@ -37,10 +37,11 @@ public class Streaming {
         System.out.println(countries);
         System.out.println(countries.size()); //pocet zemi
 
+        //vypíše země v evropě
         countries.stream()
                 .filter(country -> country.getContinent().equals("Europe"))
                 .forEach(System.out::println);
-
+        //map vezm pole a zpracuje ho, pak nad nim mohu pracovat,
         double avgEurope = countries.stream()
                 .filter(country -> country.getContinent().equals("Europe"))
                 .mapToDouble(Country::getLifeExpectancy)
