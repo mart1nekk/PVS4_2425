@@ -1,5 +1,6 @@
 package recap;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -81,6 +82,7 @@ public class MapTest {
         idk.stream()
                 .filter(s -> s.getSubject().equals("Biology") && s.getTimespent() <50 && s.isScore() >80)
                 .forEach(System.out::println);
+
 
         //druhy
         Long pocetPredmetu = idk.stream()
