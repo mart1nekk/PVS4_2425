@@ -105,13 +105,13 @@ public class MapTest {
         System.out.println(unique.size());
 
         //ctvrty
-        double avgtime = idk.stream()
+        /*double avgtime = idk.stream()
                 .filter(s -> s.getTimespent())
                 .mapToDouble(student::getTimespent)
                 .average()
                 .orElse(0);
         System.out.println(avgtime);
-
+           */
 
         HashMap<String, ArrayList<student>> contiMap = new HashMap<>();
         for (student st: idk ){

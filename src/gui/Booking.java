@@ -17,51 +17,60 @@ public class Booking extends JFrame {
         add(headerLabel, BorderLayout.NORTH);
 
         JPanel formPanel = new JPanel(new GridLayout(5, 2, 10, 10));
-        formPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        formPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //odsazení
 
+        //jméno
         JLabel nameLabel = new JLabel("Full Name:");
         nameLabel.setFont(new Font("Consolas", Font.PLAIN, 14));
-        JTextField nameField = new JTextField();
+        JTextField nameField = new JTextField(); //field pro jméno
         formPanel.add(nameLabel);
         formPanel.add(nameField);
 
+        //telefonni cislo
         JLabel phoneLabel = new JLabel("Phone Number:");
         phoneLabel.setFont(new Font("Consolas", Font.PLAIN, 14));
-        JTextField phoneField = new JTextField();
+        JTextField phoneField = new JTextField(); //field pro telefonni cislo
         formPanel.add(phoneLabel);
         formPanel.add(phoneField);
 
+        //zaskrtavaci ctverecek pro slevu
         JLabel discountLabel = new JLabel("Student Discount:");
         discountLabel.setFont(new Font("Consolas", Font.PLAIN, 14));
 
-        JPanel discountPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel discountPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); //panel pro tlacitko
         JCheckBox discountCheckBox = new JCheckBox();
         discountPanel.add(discountCheckBox);
-
         formPanel.add(discountLabel);
         formPanel.add(discountPanel);
 
+        //destinace
         JLabel optionsLabel = new JLabel("Choose Your Destination:");
         optionsLabel.setFont(new Font("Consolas", Font.PLAIN, 14));
         JPanel optionsPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
         JRadioButton beachOption = new JRadioButton("Beach");
         beachOption.setFont(new Font("Consolas", Font.PLAIN, 12));
         JRadioButton mountainOption = new JRadioButton("Mountains");
         mountainOption.setFont(new Font("Consolas", Font.PLAIN, 12));
         JRadioButton cityOption = new JRadioButton("City");
         cityOption.setFont(new Font("Consolas", Font.PLAIN, 12));
+
         ButtonGroup optionsGroup = new ButtonGroup();
         optionsGroup.add(beachOption);
         optionsGroup.add(mountainOption);
         optionsGroup.add(cityOption);
+
         optionsPanel.add(beachOption);
         optionsPanel.add(mountainOption);
         optionsPanel.add(cityOption);
+
         formPanel.add(optionsLabel);
         formPanel.add(optionsPanel);
 
+        //posuvny na dny
         JLabel daysLabel = new JLabel("Days:");
         daysLabel.setFont(new Font("Consolas", Font.PLAIN, 14));
+
         JSlider daysSlider = new JSlider(5, 105);
         daysSlider.setMajorTickSpacing(25);
         daysSlider.setMinorTickSpacing(5);

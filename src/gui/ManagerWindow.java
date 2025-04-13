@@ -28,6 +28,7 @@ public class ManagerWindow extends JFrame {
         setTitle("Manager");
         setLayout(new BorderLayout());
         vacations = new ArrayList<>();
+
         //header - north
         JLabel headerLabel = new JLabel("Manage vacation applications", JLabel.CENTER);
         headerLabel.setFont(DEAFULT_FONT);
