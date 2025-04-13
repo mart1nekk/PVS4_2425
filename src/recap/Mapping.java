@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class Mapping {
+public class  Mapping {
     static class Movie{
         String name;
         int year;
