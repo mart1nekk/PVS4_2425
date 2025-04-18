@@ -90,5 +90,8 @@ public class Streaming {
             }
         }
 
+        //Map<String, List<Country>> contiMap = countries.stream()
+        //    .collect(Collectors.groupingBy(Country::getContinent));
+
     }
 }
